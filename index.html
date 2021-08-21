@@ -16,41 +16,41 @@
 <body>
      <section class="container">
           <div class="row">
-               <figure class="col-lg-6 p-5">
+               <figure class="col-lg-6 px-5 py-4">
                     <img src="assets/images/mac.png" alt="Mac Book Pro" class="img-fluid">
                </figure>
-               <div class="col-lg-6 p-5">
+               <div class="col-lg-6 px-5 py-4">
                     <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
-                    <p>Apple M1 chip with 8-core CPU with performance cores and 4 efficiency cores, 7-core GPU, 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic keyboard - US English</p>
+                    <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic keyboard - US English</p>
 
                     <!-- memory part -->
                     <div id="memory_part" class="mt-5">
                          <h6 class="fw-bold">Memory</h6>
-                         <button class="btn btn-outline-dark my-2 me-lg-2" id="memory_eightGB">8GB unified memory</button>
-                         <button class="btn btn-outline-dark my-2 ms-lg-2" id="memory_sixteenGB">16GB unified memory</button>
+                         <button class="btn btn-outline-dark mb-1" id="memory_eightGB">8GB unified memory</button>
+                         <button class="btn btn-outline-dark mb-1" id="memory_sixteenGB">16GB unified memory</button>
                     </div>
                     
                     <!-- storage part -->
-                    <div id="storage_part" class="mt-4">
+                    <div id="storage_part" class="mt-3">
                          <h6 class="fw-bold">Storage</h6>
-                         <button class="btn btn-outline-dark my-2 me-lg-2" id="storage_mini">256GB SSD storage</button>
-                         <button class="btn btn-outline-dark my-2 mx-lg-2" id="storage_medium">512GB SSD storage</button>
-                         <button class="btn btn-outline-dark my-2 ms-lg-2" id="storage_big">1TB SSD storage</button>
+                         <button class="btn btn-outline-dark mb-1" id="storage_mini">256GB SSD storage</button>
+                         <button class="btn btn-outline-dark mb-1" id="storage_medium">512GB SSD storage</button>
+                         <button class="btn btn-outline-dark mb-1" id="storage_big">1TB SSD storage</button>
                     </div>
 
                     <!-- delivery option part -->
-                    <div id="delivery_part" class="mt-4">
+                    <div id="delivery_part" class="mt-3">
                          <h6 class="fw-bold">Choose your delivery option</h6>
-                         <button class="btn btn-outline-dark my-2 me-lg-2" id="delivery_option1">
+                         <button class="btn btn-outline-dark mb-1" id="delivery_option1">
                               Friday, Aug 25 FREE Prime Delivery 
                          </button>
-                         <button class="btn btn-outline-dark my-2 ms-lg-2" id="delivery_option2">
+                         <button class="btn btn-outline-dark mb-1" id="delivery_option2">
                               Friday, Aug 21 Delivery charge $20
                          </button>
                     </div>
 
                     <!-- calculation part -->
-                    <div id="calculation_part" class="mt-4 w-50">
+                    <div id="calculation_part" class="mt-3 custom-width">
                          <table class="table">
                               <tbody>
                                    <!-- base price -->
@@ -99,9 +99,9 @@
                     </div>
 
                     <!-- promo code part -->
-                    <div id="promo_code_part" class="mt-4">
+                    <div id="promo_code_part" class="mt-2">
                          <h6>Add Promo code</h6>
-                         <div class="input-group my-2 w-50">
+                         <div class="input-group my-2 custom-width">
                               <input type="text" class="form-control" placeholder="Enter Promo code" aria-label="Enter Promo code" aria-describedby="promo_code_btn" id="promo_code_text">
                               <button class="btn btn-danger" type="button" id="promo_code_btn">Apply</button>
                          </div>
@@ -109,7 +109,7 @@
                </div>
           </div>
 
-          <div class="row pt-2 pb-3">
+          <div class="row py-2">
                <hr>
                <h1 class="text-center">
                     Total: $<span id="final_cost"></span>
