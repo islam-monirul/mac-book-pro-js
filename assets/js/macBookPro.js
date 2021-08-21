@@ -1,6 +1,6 @@
 /* ---------- setting the values of the product options ---------- */
 const calculateMemoryOption1 = 0;
-const calculateMemoryOption2 = 80;
+const calculateMemoryOption2 = 180;
 
 const calculateStorageOption1 = 0;
 const calculateStorageOption2 = 100;
