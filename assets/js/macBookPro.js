@@ -15,18 +15,18 @@ let calculateMemoryCost = 0;
 let calculateStorageCost = 0;
 let calculateDeliveryCost = 0;
 let calculateTotalCost = basePrice;
-let calculateFinalCost = calculateTotalCost;
+let calculateFinalCost = basePrice;
 
 //setting promo code status
 let promoStatus = 0;
 
-// inital value assign to html elements
 document.getElementById('initial_cost').textContent = basePrice;
 document.getElementById('extra_memory_cost').textContent = calculateMemoryCost;
 document.getElementById('extra_storage_cost').textContent = calculateStorageCost;
 document.getElementById('delivery_cost').textContent = calculateDeliveryCost;
 document.getElementById('total_cost').textContent = calculateTotalCost;
 document.getElementById('final_cost').textContent = calculateFinalCost;
+
 
 // selecting elements by their id
 const memoryEightGb = document.getElementById('memory_eightGB');
@@ -46,7 +46,6 @@ const totalCost = document.getElementById('total_cost');
 
 const promo = document.getElementById('promo_code_btn');
 
-
 // adding actionListeners
 // for memory costs
 memoryEightGb.addEventListener('click', function (){
@@ -55,3 +54,25 @@ memoryEightGb.addEventListener('click', function (){
 memorySixteenGb.addEventListener('click', function (){
      calcMemoryCost(calculateMemoryOption2);
 });
+
+// for storage cost
+storageMini.addEventListener('click', function (){
+     calcStorageCost(calculateStorageOption1);
+});
+storageMedium.addEventListener('click', function (){
+     calcStorageCost(calculateStorageOption2);
+});
+storageBig.addEventListener('click', function (){
+     calcStorageCost(calculateStorageOption3);
+});
+
+// for delivery charge cost
+deliveryOption1.addEventListener('click', function (){
+     calcDeliveryCost(calculateDeliveryCost1);
+});
+deliveryOption2.addEventListener('click', function (){
+     calcDeliveryCost(calculateDeliveryCost2);
+});
+
+// for promo code
+promo.addEventListener('click', calcPromoCode);
