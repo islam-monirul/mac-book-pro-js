@@ -28,3 +28,20 @@ document.getElementById('delivery_cost').textContent = calculateDeliveryCost;
 document.getElementById('total_cost').textContent = calculateTotalCost;
 document.getElementById('final_cost').textContent = calculateFinalCost;
 
+// selecting elements by their id
+const memoryEightGb = document.getElementById('memory_eightGB');
+const memorySixteenGb = document.getElementById('memory_sixteenGB');
+
+const storageMini = document.getElementById('storage_mini');
+const storageMedium = document.getElementById('storage_medium');
+const storageBig = document.getElementById('storage_big');
+
+const deliveryOption1 = document.getElementById('delivery_option1');
+const deliveryOption2 = document.getElementById('delivery_option2');
+
+const extraMemoryCost = document.getElementById('extra_memory_cost');
+const extraStorageCost = document.getElementById('extra_storage_cost');
+const deliveryCost = document.getElementById('delivery_cost');
+const totalCost = document.getElementById('total_cost');
+
+const promo = document.getElementById('promo_code_btn');
