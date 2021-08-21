@@ -45,3 +45,13 @@ const deliveryCost = document.getElementById('delivery_cost');
 const totalCost = document.getElementById('total_cost');
 
 const promo = document.getElementById('promo_code_btn');
+
+
+// adding actionListeners
+// for memory costs
+memoryEightGb.addEventListener('click', function (){
+     calcMemoryCost(calculateMemoryOption1);
+});
+memorySixteenGb.addEventListener('click', function (){
+     calcMemoryCost(calculateMemoryOption2);
+});
