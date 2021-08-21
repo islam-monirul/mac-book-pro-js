@@ -76,3 +76,72 @@ deliveryOption2.addEventListener('click', function (){
 
 // for promo code
 promo.addEventListener('click', calcPromoCode);
+
+// all functions
+// function for calculating memory cost
+function calcMemoryCost(memoryValue){
+     calculateMemoryCost = memoryValue;
+     finalCalc();
+}
+
+// function for calculating storage cost
+function calcStorageCost(storageValue){
+     calculateStorageCost = storageValue;
+     finalCalc();
+}
+
+// function for calculating delivery cost
+function calcDeliveryCost(deliveryValue){
+     calculateDeliveryCost = deliveryValue;
+     finalCalc();
+}
+
+// function for promo code
+function calcPromoCode(){
+     // if promo code not applied before
+     if(promoStatus == 0){
+          const promoCode = document.getElementById('promo_code_text').value;
+          if(promoCode == "stevekaku"){
+               promoStatus = 1;
+               finalCalc();
+          }
+          else{
+               alert('Invalid Promo Code.')
+          }
+     }
+     // if valid promo code already applied
+     else{
+          alert('Promo code already applied.');
+     }
+
+     document.getElementById('promo_code_text').value = '';
+}
+
+// function for total cost calculation
+function calcTotalCost(){
+     calculateTotalCost = basePrice + calculateMemoryCost + calculateStorageCost + calculateDeliveryCost;
+     document.getElementById('total_cost').textContent = calculateTotalCost;
+}
+
+// function for final cost calculation
+function calcFinalCost(){
+     if(promoStatus == 1){
+          calculateFinalCost = calculateTotalCost - (calculateTotalCost * 0.2);
+     }
+
+     else{
+          calculateFinalCost = calculateTotalCost;
+     }
+
+     document.getElementById('final_cost').textContent = calculateFinalCost;
+}
+
+// function for assigning final values to html element
+function finalCalc(){
+     document.getElementById('initial_cost').textContent = basePrice;
+     document.getElementById('extra_memory_cost').textContent = calculateMemoryCost;
+     document.getElementById('extra_storage_cost').textContent = calculateStorageCost;
+     document.getElementById('delivery_cost').textContent = calculateDeliveryCost;
+     calcTotalCost();
+     calcFinalCost();
+}
